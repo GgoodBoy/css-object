@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <div class="listTitle">
+                <div>{{dataInfo.title}}</div>
+        </div>        
+    </body>
+    <style>  
+
+        .listTitle{
+            padding: 0.2rem 0.3rem;
+            position: relative;
+        }  
+        .listTitle div{
+                height: 0.56rem;
+                line-height: 0.56rem;
+                padding: 0 0.3rem;
+                font-size: 0.4rem;
+                color: #333;
+                font-weight: 500;
+            } 
+            /* 
+            表示在div前面加一个红色背景的竖条，当不填写内容的时候content稳控，同时使用display: block; 样式将要添加的改为块级元素，
+            :after 的使用和before一样；
+            */
+        .listTitlediv:before{
+                content:'';
+                height: 0.4rem;
+                width: 0.06rem;
+                bottom: 0.27rem;
+                left: 0.3rem;                
+                display: block;   
+                position: absolute;
+                background: #C30D23;
+            }                         
+    </style>
+</html>
