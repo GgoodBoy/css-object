@@ -4,9 +4,15 @@
         <div class="div-wrap">
                 <div class="child-wrap"></div>
         </div>
+        <div class="container">
+            <div class="chunk color1">1</div>
+            <div class="chunk color2">2</div>
+            <div class="chunk color3">3</div>
+        </div>
     </body>
     <script></script>
     <style>
+        /* 【方法一】 */
         .div-wrap{
                 /* position: relative; */
                 position: fixed;
@@ -32,5 +38,49 @@
                      */
                     transform: translate(-50%,-50%);    
         }        
+    </style>
+    <style>
+
+
+
+ /* 【方法二】 */       
+/* container为flex布局中子元素item的父级容器 */
+.container{
+  /*display: flex的设置讲改变子元素快级元素的特性 */
+  display: flex;
+  /* 控制子元素的排列四种形式，横向，纵向，横向倒叙，纵向倒叙  row  column row-reverse column-reverse*/
+  flex-direction:column-reverse ;
+  height: 400px;
+  background-color: #cccccc;
+  /* 
+  设置子元素主轴对齐方式； 
+  start  
+  end  
+  center  居中
+  space-between :两端对齐
+  space-around :均衡分布
+  */
+  justify-content:center;
+/*  
+设置子元素主轴，交叉轴对齐方式；
+
+主轴，交叉轴
+1.主轴的确定取决于 flex-direction；
+*/
+  align-items: center;
+}
+.chunk{
+  width: 100px;
+  height: 100px;
+}
+.color1{
+  background-color: brown;
+}
+.color2{
+  background-color: aqua;
+}
+.color3{
+  background-color: blue;
+}        
     </style>
 </html>
